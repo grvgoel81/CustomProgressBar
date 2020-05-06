@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etBlobAnimationPercentage"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAnimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/etBlobAnimationPercentage"
+            android:text="Animate" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.example.unacademyassignment.CircularProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:padding="0dp"
+                app:circle_progress_color="@color/green"
+                app:circle_x_radius="100dp"
+                app:circle_y_radius="100dp"
+                app:end_angle="270"
+                app:max="100"
+                app:pointer_alpha_ontouch="100"
+                app:pointer_color="@color/orange"
+                app:pointer_halo_color="@color/orange"
+                app:start_angle="270"
+                app:use_custom_radii="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
